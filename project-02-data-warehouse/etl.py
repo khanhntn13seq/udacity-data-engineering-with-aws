@@ -15,7 +15,7 @@ def load_staging_tables(cur, conn):
 def insert_tables(cur, conn):
     '''
     Insert data into dim, fact tables from staging tables in Redshift
-    '''g
+    '''
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
